@@ -1,0 +1,35 @@
+# Initial decision for the player: choose between exploring a cave or inspecting a shipwreck.
+decision_1 = input('Do you wish to explore the "cave" hidden beneath the rocky cliffs or inspect the "shipwreck" on the shore? Type "cave" to explore the dark caverns. Type "shipwreck" to search the sunken ship. \n\nSelect your journey! --> ')
+
+# Check the player's first decision.
+if decision_1.lower() == 'cave':
+  # Next decision if the player chose to explore the cave.
+  decision_2 = input('\nAs you venture deep into the cave, you encounter a mystical mermaid guarding a treasure chest. She offers you a choice: "gold" or "map". Which do you choose? Type "gold" to take the treasure. Type "map" to accept the ancient map.\n\nWhats your choice? --> ')
+  
+  # Check the player's second decision.
+  if decision_2.lower() == 'map':
+    # Further decision making after choosing the map.
+    decision_3 = input('\nThe mermaid smiles and hands you the ancient map, which reveals the location of the Treasure of Eldorado. Your adventure continues. With the map in hand, you set sail towards an uncharted island where the treasure is said to be buried. As you approach, a fierce storm hits, and you must choose to "navigate" through it or "retreat" and wait for it to pass. Type "navigate" to brave the storm. Type "retreat" to wait for safer conditions.\n\nWhat is your decision? --> ')
+    
+    # Check the player's third decision.
+    if decision_3.lower() == 'navigate':
+      # Decision point after navigating the storm successfully.
+      decision_4 = input('Your expert sailing skills allow you to navigate through the storm, and you arrive at the island by dawn. You find three paths leading into the jungle: "left", "right", or "straight". Which path do you choose? Type "left" to take the left path. Type "right" to take the right path. Type "straight" to go straight ahead.\n\nWhat is your choice? --> ')
+      
+      # Final decision and outcomes based on the chosen path.
+      if decision_4.lower() == 'right':
+        print('\nYou and your crew find an ancient temple hidden by the jungle. Inside, the Treasure of Eldorado awaits. You Win!')
+      elif decision_4.lower() == 'left':
+        print('\nThe path leads to quicksand, and without help, you and your crew are quickly swallowed. Game Over.')
+      else:
+        print("\nYou come face to face with a ferocious tiger guarding its territory. Despite your best efforts to fight or flee, it's too late. Game Over.")
+    else: 
+      # Outcome if the player chooses to retreat from the storm.
+      print('\nYou decide to retreat, but the storm worsens, and your ship is swallowed by the raging seas. Game Over.')
+  else:
+    # Outcome if the player chooses the gold over the map.
+    print('\nYou greedily take the gold, but the cave begins to collapse around you, triggered by a curse on the treasure. Game Over.')
+    
+else:
+  # Outcome if the player decides to inspect the shipwreck.
+  print("\nWhile investigating the shipwreck, the ground beneath you collapses, and you fall into a hidden underwater cavern. Game Over.")
